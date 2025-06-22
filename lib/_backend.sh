@@ -97,11 +97,11 @@ FACEBOOK_APP_ID=2813216208828642
 FACEBOOK_APP_SECRET=8233912aeade366dd8e2ebef6be256b6
 
 # EMAIL
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_SECURE=false
-SMTP_USER=seuemail@gmail.com
-SMTP_PASS=suasenha
+SMTP_HOST="smtp.gmail.com"
+SMTP_PORT="587"
+SMTP_SECURE="false"
+SMTP_USER="seuemail@gmail.com"
+SMTP_PASS="suasenha"
 SMTP_FROM="Seu Nome <seuemail@gmail.com>"
 
 

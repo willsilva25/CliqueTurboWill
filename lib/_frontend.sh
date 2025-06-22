@@ -16,7 +16,9 @@ frontend_node_dependencies() {
 
   sudo su - deploy <<EOF
   cd /home/deploy/${instancia_add}/frontend
-  npm -f install
+  rm -rf node_modules package-lock.json
+  npm install react-scripts@5 --save --f
+  npm install --f
 EOF
 
   sleep 2
@@ -59,7 +61,9 @@ frontend_update() {
   pm2 stop ${empresa_atualizar}-frontend
   git pull
   cd /home/deploy/${empresa_atualizar}/frontend
-  npm -f install
+  rm -rf node_modules package-lock.json
+  npm install react-scripts@5 --save --f
+  npm install --f
   rm -rf build
   npm run build
   pm2 start ${empresa_atualizar}-frontend
