@@ -55,11 +55,11 @@ backend_set_env() {
 
 sudo su - deploy << EOF
   cat <<[-]EOF > /home/deploy/${instancia_add}/backend/.env
-NODE_ENV=
+NODE_ENV=production
 BACKEND_URL=${backend_url}
 FRONTEND_URL=${frontend_url}
 PROXY_PORT=443
-PORT=${backend_port}
+PORT=4000
 
 DB_HOST=localhost
 DB_DIALECT=postgres
@@ -75,7 +75,7 @@ TIMEOUT_TO_IMPORT_MESSAGE=1000
 JWT_SECRET=${jwt_secret}
 JWT_REFRESH_SECRET=${jwt_refresh_secret}
 
-REDIS_URI=redis://:${mysql_root_password}@127.0.0.1:${redis_port}
+REDIS_URI=redis://localhost:6379
 REDIS_OPT_LIMITER_MAX=1
 REGIS_OPT_LIMITER_DURATION=3000
 
